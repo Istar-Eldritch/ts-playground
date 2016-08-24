@@ -9,7 +9,3 @@ services:
      - /opt/node_modules
     environment:
       TERM: dumb
-networks:
-  default:
-    external:
-      name: apirepositiveio_default

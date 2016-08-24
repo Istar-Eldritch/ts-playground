@@ -8,7 +8,7 @@
   },
   "scripts": {
     "setup": "npm i && typings i",
-    "start": "nodemon -e ts -q -x 'clear && rm -fr dist && tsc --outDir dist && node dist/main/index.js'",
+    "start": "nodemon -e ts -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc --outDir dist || return 0 && node dist/main/index.js'",
     "test": "tape dist/test/**/*.spec.js"
   },
   "author": "",

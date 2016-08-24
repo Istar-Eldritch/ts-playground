@@ -1,0 +1,15 @@
+version: '2'
+services:
+  playground:
+    command: /bin/sh -c "npm run setup && npm run start"
+    image: node
+    working_dir: /opt
+    volumes:
+     - .:/opt
+     - /opt/node_modules
+    environment:
+      TERM: dumb
+networks:
+  default:
+    external:
+      name: apirepositiveio_default

@@ -1,11 +1,12 @@
 version: '2'
 services:
-  playground:
+  play:
     command: /bin/sh -c "npm run setup && npm run start"
     image: node
     working_dir: /opt
     volumes:
      - .:/opt
      - /opt/node_modules
+     - /opt/typings
     environment:
       TERM: dumb

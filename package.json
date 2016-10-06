@@ -7,16 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "setup": "npm i && typings i",
-    "start": "nodemon -e ts -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc --outDir dist || return 0 && node dist/main/index.js'",
-    "test": "tape dist/test/**/*.spec.js"
+    "start": "nodemon --watch src --watch package.json -e ts,json -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc --outDir dist || return 0 && node dist/worksheet.js'",
+    "test": "echo 'no test suite defined' && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^1.10.0",
-    "tape": "^4.6.0",
-    "typescript": "^1.8.10",
-    "typings": "^1.3.2"
+    "nodemon": "latest",
+    "typescript": "latest"
   }
 }

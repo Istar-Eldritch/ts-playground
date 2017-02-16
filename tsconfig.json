@@ -13,6 +13,7 @@
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true,
         "rootDir": "src",
+        "outDir": "dist",
         "inlineSourceMap": true
     },
     "exclude": [

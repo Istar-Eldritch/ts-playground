@@ -7,13 +7,17 @@
     "test": "test"
   },
   "scripts": {
-    "start": "nodemon --watch src --watch package.json -e ts,json -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc --outDir dist || return 0 && node dist/worksheet.js'",
-    "test": "echo 'no test suite defined' && exit 1"
+    "startdev": "nodemon --watch src --watch package.json -e ts,json -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc --outDir dist || return 0 && node dist/main/index.js'",
+    "testdev": "nodemon --watch src --watch package.json -e ts,json -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc --outDir dist || return 0 && tape \"dist/test/**/*.js\"'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^7.0.5",
+    "@types/tape": "^4.2.29",
     "nodemon": "latest",
+    "tape": "^4.6.3",
     "typescript": "latest"
-  }
+  },
+  "dependencies": {}
 }

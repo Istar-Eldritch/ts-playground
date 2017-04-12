@@ -2,13 +2,16 @@
   "name": "ts-playground",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "startdev": "nodemon --watch src --watch package.json -e ts,json -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc --outDir dist || return 0 && node dist/main/index.js'",
-    "testdev": "nodemon --watch src --watch package.json -e ts,json -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc --outDir dist || return 0 && tape \"dist/test/**/*.js\"'"
+    "setup": "npm i && rm -fr dist && tsc",
+    "start": "node dist/main/index.js",
+    "test": "tape \"dist/test/**/*.js\"",
+    "startdev": "nodemon --watch src --watch package.json -e ts,json -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc || return 0 && node dist/main/index.js'",
+    "testdev": "nodemon --watch src --watch package.json -e ts,json -q -x 'rm -fr dist && echo \"\\n============\\nCOMPILING...\\n============\\n\\n\" && tsc || return 0 && tape \"dist/test/**/*.js\"'"
   },
   "author": "",
   "license": "MIT",

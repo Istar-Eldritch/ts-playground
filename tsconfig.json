@@ -1,5 +1,13 @@
 {
     "compilerOptions": {
+        "lib": ["es2015"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "isolatedModules": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": true,
+        "noImplicitAny": false,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
         "alwaysStrict": true,
@@ -19,6 +27,9 @@
         "outDir": "dist",
         "preserveConstEnums": true,
         "rootDir": "src",
+        "outDir": "dist",
+        "allowJs": false,
+        "inlineSourceMap": true,
         "strictNullChecks": true,
         "suppressImplicitAnyIndexErrors": true,
         "target": "es6"

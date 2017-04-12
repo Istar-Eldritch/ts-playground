@@ -1,4 +1,3 @@
+import {start} from './service';
 
-import hello from './hello';
-
-console.log(hello('World'));
+start();

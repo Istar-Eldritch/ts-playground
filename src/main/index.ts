@@ -1,2 +1,3 @@
+import {start} from './service';
 
-console.log('World');
+start();
